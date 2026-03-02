@@ -1,0 +1,11 @@
+.RightPanel{
+  height: 50%;
+  background-color:#F3F4F8
+}
+
+.right-panel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}

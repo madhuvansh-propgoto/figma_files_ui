@@ -1,0 +1,93 @@
+.folders-wrapper {
+  background: #f1f5f9;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.folder-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.folder-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.folder-icon {
+  font-size: 26px;
+  color: #3b82f6;
+}
+
+.badge-group {
+  display: flex;
+  align-items: center;
+}
+
+.badge-container {
+  display: flex;
+  align-items: center;
+}
+
+.folder-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -8px;
+  border: 2px solid #f8fafc;
+}
+
+.folder-avatar:first-child {
+  margin-left: 0;
+}
+
+.badge:first-child {
+  margin-left: 0;
+}
+
+.badge.blue {
+  background: #3b82f6;
+}
+
+.badge.green {
+  background: #22c55e;
+}
+
+.badge.orange {
+  background: #f59e0b;
+}
+
+.badge.red {
+  background: #ef4444;
+}
+
+.card-body h4 {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.card-body p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}

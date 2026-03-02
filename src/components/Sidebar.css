@@ -1,0 +1,57 @@
+.sidebar {
+  width: 75px;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 45px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.menu img {
+  width: 22px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.menu img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Bottom Button Container */
+.bottom {
+  margin-bottom: 10px;
+}
+
+/* Blue Add Button */
+.bottom img {
+  width: 45px;
+  padding: 10px;
+  background-color: #4f46e5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.bottom img:hover {
+  background-color: #4338ca;
+  transform: scale(1.05);
+}

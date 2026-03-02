@@ -1,0 +1,108 @@
+.storage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;            /* important */
+}
+
+/* Top Available Storage Card */
+.available-storage-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;            /* remove 298px */
+  box-sizing: border-box; /* prevents overflow */
+}
+
+.circle-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.circle-wrapper {
+  width: 130px;
+  height: 130px;
+}
+
+.storage-text h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.storage-text p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Bottom List */
+.storage-list {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;            /* remove 390px */
+  box-sizing: border-box;
+}
+
+.storage-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.storage-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.size {
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.storage-card,
+.available-storage-card,
+.storage-list {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 20px;
+}

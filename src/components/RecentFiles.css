@@ -1,0 +1,108 @@
+.recent-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 45px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.recent-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.file-icon-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  background: #f1f5f9;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.view-all {
+  color: #2d9cdb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.recent-table {
+  width: 100%;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr 40px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.table-head {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.table-row {
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.file-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon {
+  font-size: 22px;
+}
+
+.file-icon.doc {
+  color: #f59e0b;
+}
+
+.file-icon.image {
+  color: #38bdf8;
+}
+
+.file-icon.figma {
+  color: #6366f1;
+}
+
+.file-icon.ai {
+  color: #f97316;
+}
+
+.members {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -8px;
+  border: 2px solid white;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.menu-icon {
+  color: #94a3b8;
+  cursor: pointer;
+}
