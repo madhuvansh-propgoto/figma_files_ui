@@ -3,8 +3,7 @@ import {
   BarChart,
   Bar,
   CartesianGrid,
-  ResponsiveContainer,
-  Tooltip
+  ResponsiveContainer
 } from "recharts";
 
 import mediaLegend from "../assets/Mediabutton.png";
@@ -30,16 +29,13 @@ function ActivityChart() {
               stroke="#E2E8F0"
             />
 
-            <Tooltip cursor={{ fill: "transparent" }} />
-
-            <Bar dataKey="Media" fill="#5B5FEF" radius={[6, 6, 0, 0]} />
-            <Bar dataKey="Photos" fill="#2D9CDB" radius={[6, 6, 0, 0]} />
-            <Bar dataKey="Docs" fill="#FF6B4A" radius={[6, 6, 0, 0]} />
+            <Bar dataKey="Media" fill="#5051F9" radius={[6, 6, 0, 0]} />
+            <Bar dataKey="Photos" fill="#1EA7FF" radius={[6, 6, 0, 0]} />
+            <Bar dataKey="Docs" fill="#FF694A" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
 
-      {/* Custom Legend */}
       <div className="custom-legend">
         <div className="legend-item">
           <img src={mediaLegend} alt="Media" />

@@ -2,34 +2,35 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;            /* important */
+  width: 100%;           
 }
 
-/* Top Available Storage Card */
 .available-storage-card {
   background: white;
   padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  width: 100%;            /* remove 298px */
-  box-sizing: border-box; /* prevents overflow */
+  width: 100%;            
+  box-sizing: border-box; 
 }
 
 .circle-section {
   display: flex;
   align-items: center;
   gap: 30px;
+  background-color: #F6F6F8;
+  border-radius: 11px;
 }
 
 .circle-wrapper {
   width: 130px;
   height: 130px;
+  padding: 10px 10px 10px 10px;
 }
 
 .storage-text h4 {
   margin: 0;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .storage-text p {
@@ -62,6 +63,8 @@
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+  font-weight: 700;
+  color: #232360;
 }
 
 .left {
@@ -98,9 +101,15 @@
   border-radius: 10px;
 }
 
-.storage-card,
-.available-storage-card,
-.storage-list {
+.available-storage-card {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.storage-card
+ {
   width: 100%;
   box-sizing: border-box;
   background-color: white;

@@ -1,6 +1,7 @@
 .dashboard {
   display: flex;
   height: 100vh;
+  background-color: #F3F4F8;
 }
 
 .main {
@@ -11,26 +12,7 @@
 
 .content {
   flex: 1;
-  background-color: #f4f6fb;
-  padding: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-.page-title {
-  background-color: #f4f6fb;
-  padding: 30px 30px 0 30px;
-}
-
-.page-title h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #1e293b;
-}
-
-.content {
-  flex: 1;
-  background-color: #f4f6fb;
+  background-color: #F3F4F8;
   padding: 30px;
   display: flex;
   gap: 20px;
@@ -38,25 +20,17 @@
 
 .left-panel {
   flex: 3;
+  background-color: #F3F4F8;
 }
 
 .right-panel {
   flex: 1;
-  background-color: #f4f6fb;
+  background-color: #F3F4F8;
   border-radius: 50px;
   box-sizing: border-box;
 }
 
-.content-area {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
 
-.right-section {
-  flex: 1;
-  min-width: 300px;
-}
 
 .page-header {
   display: flex;
@@ -66,10 +40,17 @@
   margin-top: 20px;
 }
 
-.page-header h2 {
-  font-size: 26px;
-  font-weight: 600;
-  color: #1e293b;
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F3F4F8;
 }
 
 .header-actions {
@@ -77,25 +58,37 @@
   gap: 12px;
 }
 
-.btn-primary {
-  background: #6366f1;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 25px;
+.btn {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
   cursor: pointer;
+  border: none;
+  line-height: 1;
+  justify-content: center
 }
 
-.btn-secondary {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  padding: 10px 18px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn.primary {
+  background-color: #6366f1;
+  color: white;
+  border-radius: 90px;
+}
+
+.btn.secondary {
+  background-color: #f3f4f6;
+  color: #333;
+  border-radius: 90px;  
+}
+
+.headerfont{
+  font-weight:700;
+  font-size: 30px;
+  
 }

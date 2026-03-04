@@ -2,10 +2,10 @@ import React from "react";
 import "./StorageCard.css";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import mediaIcon from "../assets/media.png";
-import documentsIcon from "../assets/documents.png";
-import musicIcon from "../assets/music.png";
-import otherIcon from "../assets/other.png";
+import mediaIcon from "../assets/media.svg";
+import documentsIcon from "../assets/document.svg";
+import musicIcon from "../assets/music.svg";
+import otherIcon from "../assets/other.svg";
 
 function StorageCard() {
   const percentage = 85;
@@ -23,7 +23,7 @@ function StorageCard() {
               text={`${percentage}%`}
               strokeWidth={14}
               styles={buildStyles({
-                textSize: "18px",
+                textSize: "14px",
                 pathColor: "#2D9CDB",
                 textColor: "#1e293b",
                 trailColor: "#f1f5f9",

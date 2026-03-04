@@ -6,10 +6,11 @@
 }
 
 .folder-section {
-  background: white;
+  background: #FFFFFF;
   padding: 25px;
+  height: 406px;
   border-radius: 20px;
-  border: 2px solid #e5e7eb;
+  border: 2px solid #FFFFFF;
 }
 
 .section-header {

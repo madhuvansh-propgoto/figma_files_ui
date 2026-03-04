@@ -2,19 +2,20 @@
 import React from "react";
 import "./Sidebar.css";
 
-import logo from "../assets/img1side.png";
-import grid from "../assets/img2side.png";
-import briefcase from "../assets/img3side.png";
-import book from "../assets/img4side.png";
-import settings from "../assets/img5side.png";
-import send from "../assets/img6side.png";
-import addFolder from "../assets/img7side.png";
+import logo from "../assets/img1side.svg";
+import grid from "../assets/img2side.svg";
+import briefcase from "../assets/img3side.svg";
+import book from "../assets/img4side.svg";
+import settings from "../assets/img5side.svg";
+import send from "../assets/img6side.svg";
+import addFolder from "../assets/img7side.svg";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="logo">
         <img src={logo} alt="Logo" />
+        <p className="logo-text">OCTOM.</p>
       </div>
 
       <div className="menu">

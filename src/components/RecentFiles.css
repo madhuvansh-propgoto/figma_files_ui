@@ -2,7 +2,7 @@
   background: white;
   padding: 25px;
   border-radius: 20px;
-  margin-top: 45px;
+  margin-top: 22px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -54,8 +54,9 @@
 }
 
 .table-row {
-  font-size: 15px;
+  font-size: 17px;
   color: #1e293b;
+  font-weight: 500;
 }
 
 .file-name {
