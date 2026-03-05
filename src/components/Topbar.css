@@ -51,5 +51,15 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  cursor: pointer;
 }
+
+.avatar-bg{
+  width: 40px;
+  height:40px;
+  background-color: #E7E7FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

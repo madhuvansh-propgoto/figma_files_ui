@@ -26,7 +26,7 @@ function ActivityChart() {
             <CartesianGrid
               strokeDasharray="4 4"
               vertical={false}
-              stroke="#E2E8F0"
+              stroke="#CECECE"
             />
 
             <Bar dataKey="Media" fill="#5051F9" radius={[6, 6, 0, 0]} />

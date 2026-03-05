@@ -1,15 +1,15 @@
 import "./RecentFiles.css";
 import { FiMoreVertical } from "react-icons/fi";
-import proposalIcon from "../assets/proposal.png";
-import backgroundIcon from "../assets/background.png";
-import apexIcon from "../assets/Apex1.png";
-import illustrationIcon from "../assets/illustration.png";
+import proposalIcon from "../assets/proposal.svg";
+import backgroundIcon from "../assets/background.svg";
+import apexIcon from "../assets/Apex1.svg";
+import illustrationIcon from "../assets/illustration.svg";
 
-import avatar1 from "../assets/avatar1.png";
-import avatar2 from "../assets/avatar2.png";
-import avatar3 from "../assets/avatar3.png";
-import avatar4 from "../assets/avatar4.png";
-import avatar5 from "../assets/avatar5.png";
+import avatar1 from "../assets/avatar1.svg";
+import avatar2 from "../assets/avatar2.svg";
+import avatar3 from "../assets/avatar3.svg";
+import avatar4 from "../assets/avatar4.svg";
+import avatar5 from "../assets/avatar5.svg";
 
 function RecentFiles() {
   const files = [

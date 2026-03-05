@@ -24,9 +24,9 @@ function StorageCard() {
               strokeWidth={14}
               styles={buildStyles({
                 textSize: "14px",
-                pathColor: "#2D9CDB",
-                textColor: "#1e293b",
-                trailColor: "#f1f5f9",
+                pathColor: "#1EA7FF",
+                textColor: "#232360",
+                trailColor: "#F6F6F8",
                 strokeLinecap: "round",
               })}
             />

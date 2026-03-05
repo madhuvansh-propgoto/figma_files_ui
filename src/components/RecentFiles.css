@@ -1,7 +1,7 @@
 .recent-card {
-  background: white;
+  background: #FFFFFF;
   padding: 25px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 22px;
   width: 100%;
   box-sizing: border-box;
@@ -15,9 +15,9 @@
 }
 
 .recent-header h3 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #1e293b;
+  font-size: 30px;
+  font-weight: 500;
+  color: #232360;
 }
 
 .file-icon-img {
@@ -30,7 +30,7 @@
 }
 
 .view-all {
-  color: #2d9cdb;
+  color:#1EA7FF;
   cursor: pointer;
   font-weight: 500;
 }

@@ -2,8 +2,9 @@ import React from "react";
 import "./FolderSection.css";
 import FolderCard from "./FolderCard";
 import { FiFolder, FiChevronDown } from "react-icons/fi";
-import aImg from "../assets/a img.png";
-import bImg from "../assets/b img.png";
+import { FaFolder } from "react-icons/fa";
+import aImg from "../assets/a img.svg";
+import bImg from "../assets/b img.svg";
 
 const FolderSection = () => {
   const folders = [
@@ -20,9 +21,12 @@ const FolderSection = () => {
     <div className="folder-section">  
       <div className="section-header">
         <div className="left">
-          <FiFolder />
-          <span>All Files</span>
+          <div className="subLeft">
+          <FaFolder className="folder-label-icon" style={{ color:" #5051F9" }} />
           <FiChevronDown />
+          </div>
+          <span className="spanFol">All Files</span>
+          
         </div>
 
         <div className="right">

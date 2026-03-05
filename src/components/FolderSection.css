@@ -32,6 +32,9 @@
   align-items: center;
   gap: 5px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #232360;
 }
 
 .folder-grid {
@@ -39,3 +42,23 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
+.folder-label-icon{
+  height: 15px;
+  width: 20px;
+}
+
+.spanFol{
+  font-size: 14px;
+  font-weight: bold;
+  color: #232360;
+  gap: 16;
+}
+
+.subLeft{
+  background-color: #FFFFFF;
+}
+.spanFol{
+  margin-left: 7px;
+}
+
