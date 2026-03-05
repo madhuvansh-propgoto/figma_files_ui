@@ -24,7 +24,7 @@
   width: 36px;
   height: 36px;
   object-fit: contain;
-  background: #f1f5f9;
+  background: #F7F7F9;
   padding: 8px;
   border-radius: 12px;
 }
@@ -48,14 +48,14 @@
 }
 
 .table-head {
-  color: #94a3b8;
+  color: #768396;
   font-weight: 500;
   font-size: 14px;
 }
 
 .table-row {
   font-size: 17px;
-  color: #1e293b;
+  color: #768396;
   font-weight: 500;
 }
 
@@ -63,26 +63,11 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  color: #232360;
 }
 
 .file-icon {
   font-size: 22px;
-}
-
-.file-icon.doc {
-  color: #f59e0b;
-}
-
-.file-icon.image {
-  color: #38bdf8;
-}
-
-.file-icon.figma {
-  color: #6366f1;
-}
-
-.file-icon.ai {
-  color: #f97316;
 }
 
 .members {

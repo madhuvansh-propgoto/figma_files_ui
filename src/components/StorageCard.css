@@ -1,13 +1,13 @@
 .storage-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;           
+  width: 100%;    
+  border-radius: 10px;       
 }
 
 .available-storage-card {
   background: #FFFFFF;
-  padding: 25px;
+  padding: 23px;
   border-radius: 20px;
   width: 100%;            
   box-sizing: border-box; 
@@ -43,8 +43,8 @@
 /* Bottom List */
 .storage-list {
   background: #FFFFFF;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 0px 20px 20px 20px;
+  border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -54,9 +54,10 @@
 }
 
 .storage-item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 12px;
+  align-items: start;
 }
 
 .item-header {
@@ -71,26 +72,38 @@
 .left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .storage-icon-img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
+  width: 22px;
+  height: 22px;
 }
 
-.icon {
+.icons {
+  width: 42px;
+  height: 42px;
+  background: #F7F7F9;
+  border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
+.item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
 .size {
-  color: #64748b;
+  color: #768396;
   white-space: nowrap;
 }
 
 .progress-bar {
+  width: 100%;
   height: 6px;
   background: #e5e7eb;
   border-radius: 10px;
@@ -106,7 +119,7 @@
   width: 100%;
   box-sizing: border-box;
   background-color: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .storage-card

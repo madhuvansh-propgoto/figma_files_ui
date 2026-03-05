@@ -74,9 +74,9 @@ function RecentFiles() {
             <span>{file.date}</span>
 
             <div className="members">
-              {file.members.map((member, i) => (
+              {file.members.map((member, index) => (
                 <img
-                  key={i}
+                  key={index}
                   src={member}
                   alt="member"
                   className="avatar"

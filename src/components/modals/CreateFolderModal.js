@@ -3,7 +3,7 @@ import "./CreateFolderModal.css";
 
 const CreateFolderModal = ({ onClose }) => {
   const [folderName, setFolderName] = useState("");
-  const [location, setLocation] = useState("Root");
+  const [location, setLocation] = useState("Media");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,9 +29,6 @@ const CreateFolderModal = ({ onClose }) => {
       >
         <div className="modal-header">
           <h3>Create New Folder</h3>
-          <span className="close-btn" onClick={onClose}>
-            ×
-          </span>
         </div>
 
         <form onSubmit={handleSubmit} className="modal-body">
@@ -54,15 +51,17 @@ const CreateFolderModal = ({ onClose }) => {
           </select>
 
           <div className="modal-actions">
+           
+            <button type="submit" className="create-btn">
+              Create
+            </button>
+
             <button
               type="button"
               className="cancel-btn"
               onClick={onClose}
             >
               Cancel
-            </button>
-            <button type="submit" className="create-btn">
-              Create
             </button>
           </div>
         </form>

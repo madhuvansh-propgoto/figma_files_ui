@@ -71,7 +71,6 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
 
         <form onSubmit={handleSubmit}>
           
-          {/* Hidden File Input */}
           <input
             type="file"
             id="fileUpload"
@@ -79,7 +78,6 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
             onChange={handleFileChange}
           />
 
-          {/* Upload Button */}
           <label htmlFor="fileUpload" className="btn upload-btn">
             Select File
           </label>
