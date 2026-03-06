@@ -9,7 +9,7 @@
   background: #FFFFFF;
   padding: 23px;
   border-radius: 20px;
-  width: 100%;            
+  width: 349px;            
   box-sizing: border-box; 
 }
 
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;            /* remove 390px */
+  width: 349px;      
   box-sizing: border-box;
 }
 

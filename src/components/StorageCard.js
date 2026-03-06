@@ -21,7 +21,7 @@ function StorageCard() {
             <CircularProgressbar
               value={percentage}
               text={`${percentage}%`}
-              strokeWidth={14}
+              strokeWidth={10}
               styles={buildStyles({
                 textSize: "14px",
                 pathColor: "#1EA7FF",

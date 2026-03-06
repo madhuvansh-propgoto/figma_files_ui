@@ -1,11 +1,15 @@
 .sidebar {
   width: 94px;
-  height: 100vh;
+  /* height: 850px; */
   background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
+  /* position: fi xed;
+  left: 0;
+  top: 0; */
+  justify-content: space-between;
 }
 
 .logo {
@@ -29,7 +33,6 @@
   flex-direction: column;
   gap: 45px;
   align-items: center;
-  margin-top: 160px;
 }
 
 .menu img {
@@ -46,7 +49,7 @@
 
 /* Bottom Button Container */
 .bottom {
-  margin: top 80px;
+  margin-bottom: 80px;
 }
 
 /* Blue Add Button */

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
 import "./Dashboard.css";
 import FolderSection from "../components/FolderSection";
 import RightPanel from "../components/RightPanel";
@@ -8,6 +7,7 @@ import RecentFiles from "../components/RecentFiles";
 import CreateFolderModal from "../components/modals/CreateFolderModal";
 import CreateFileModal from "../components/modals/CreateFileModal";
 import upload from "../assets/upload.svg";
+import Topbar from "../components/Topbar";
 
 const Dashboard = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -42,10 +42,10 @@ const Dashboard = () => {
         </div>
 
         <div className="content">
-          <div className="left-panel">
+           <div className="left-panel">
             <FolderSection />
             <RecentFiles />
-          </div>
+          </div> 
 
           <div className="right-panel">
             <RightPanel />

@@ -1,7 +1,8 @@
 .dashboard {
   display: flex;
-  height: 100vh;
+  height: "100%";
   background-color: #F3F4F8;
+  /* margin-left: 86px; */
 }
 
 .main {
@@ -13,8 +14,9 @@
 .content {
   flex: 1;
   background-color: #F3F4F8;
-  padding: 30px;
+  padding: 24px;
   display: flex;
+  margin-left: 37px;
   gap: 20px;
 }
 
@@ -37,7 +39,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px 0 30px;
-  margin-top: 20px;
+  margin-left: 30px;
+  margin-top: 65px;
 }
 
 

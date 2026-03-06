@@ -4,6 +4,7 @@ import proposalIcon from "../assets/proposal.svg";
 import backgroundIcon from "../assets/background.svg";
 import apexIcon from "../assets/Apex1.svg";
 import illustrationIcon from "../assets/illustration.svg";
+import Table from "./tableComp";
 
 import avatar1 from "../assets/avatar1.svg";
 import avatar2 from "../assets/avatar2.svg";
@@ -12,6 +13,7 @@ import avatar4 from "../assets/avatar4.svg";
 import avatar5 from "../assets/avatar5.svg";
 
 function RecentFiles() {
+  const columns = ["Name ↑", "Size ↑", "Last Modified ↑", "Members ↑", ""];
   const files = [
     {
       name: "Proposal.docx",
@@ -43,53 +45,11 @@ function RecentFiles() {
     },
   ];
 
-  return (
-    <div className="recent-card">
-      <div className="recent-header">
-        <h3>Recent File</h3>
-        <span className="view-all">View All</span>
-      </div>
-
-      <div className="recent-table">
-        <div className="table-head">
-          <span>Name ↑</span>
-          <span>Size ↑</span>
-          <span>Last Modified ↑</span>
-          <span>Members ↑</span>
-          <span></span>
-        </div>
-
-        {files.map((file, index) => (
-          <div className="table-row" key={index}>
-            <div className="file-name">
-              <img
-                src={file.icon}
-                alt="file"
-                className="file-icon-img"
-              />
-              <span>{file.name}</span>
-            </div>
-
-            <span>{file.size}</span>
-            <span>{file.date}</span>
-
-            <div className="members">
-              {file.members.map((member, index) => (
-                <img
-                  key={index}
-                  src={member}
-                  alt="member"
-                  className="avatar"
-                />
-              ))}
-            </div>
-
-            <FiMoreVertical className="menu-icon" />
-          </div>
-        ))}
-      </div>
+  return(
+    <div>
+      <Table title="Recent File" columns={columns} data={files} />
     </div>
-  );
+  )
 }
 
 export default RecentFiles;
