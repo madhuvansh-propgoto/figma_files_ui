@@ -1,6 +1,6 @@
 .topbar {
   height: 76px;
-  width: 98%;
+  /* width: "100%"; */
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
   padding: 0 40px;
   box-sizing: border-box;
   border-bottom: 1px solid #f0f0f0;
-  position: fixed;
+  position: relative;
   z-index: 1;
 }
 
@@ -16,10 +16,9 @@
   width: 150px;
 }
 
-/* search */
 
 .search-wrapper {
-  width: 290px;
+  width: 358px;
   height: 44px;
   background: #F3F7FA;
   border-radius: 7px;
@@ -27,6 +26,7 @@
   align-items: center;
   padding: 0 14px;
   gap: 8px;
+  margin-right: 70px;
 }
 
 .search-container {
@@ -41,7 +41,9 @@
 }
 
 .search-icon {
-  font-size: 18px;
+  /* font-size: 18px; */
+  height: 21px;
+  width: 21px;
   color: #94a3b8;
 }
 
@@ -51,34 +53,27 @@
   outline: none;
   background: transparent;
   font-size: 14px;
-  color: #23235F;
   font-weight: 400;
   font-family: "DM Sans";
 }
 
 .search-input::placeholder {
-  color: #94a3b8;
-  font-size: 15px;
-}
-
-.search-input {
-  border: none;
-  outline: none;
-  background: transparent;
-  width: 100%;
+  color: rgba(35, 35, 95, 1);
   font-size: 14px;
 }
-
-/* right section */
 
 .topbar-right {
   display: flex;
   align-items: center;
-  gap: 18px;
-  position: relative;
+  /* gap: 18px;
+  position: relative; */
 }
 
-/* buttons */
+.user-section {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
 
 .icon-button {
   background: transparent;
@@ -90,14 +85,10 @@
   justify-content: center;
 }
 
-/* notification icon 24x24 */
-
 .icon-img {
   width: 24px;
   height: 24px;
 }
-
-/* avatar container 40x40 */
 
 .avatar-bg {
   width: 40px;
@@ -109,23 +100,16 @@
   justify-content: center;
 }
 
-/* avatar image */
-
 .avatar-bg img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 
-/* arrow */
-
 .arrow-icon {
   font-size: 20px;
-  color: #5a5a5a;
-  margin-right: 45px;
+  color: #5250F9;
 }
-
-/* dropdown */
 
 .dropdown-menu,
 .notification-dropdown {
@@ -148,8 +132,6 @@
   margin: 0;
   display: flex;
 }
-
-/* profile box */
 
 .profile-box {
   position: absolute;
@@ -175,8 +157,6 @@
   font-size: 16px;
   color: black;
 }
-
-/* logout */
 
 .logout-box {
   position: absolute;

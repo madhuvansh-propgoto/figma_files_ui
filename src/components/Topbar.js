@@ -51,7 +51,7 @@ function Topbar() {
         <button className="icon-button">
           <img src={notificationIcon} alt="notification" className="icon-img" />
         </button>
-
+        <div className="user-section">
         <div className="avatar-bg">
           <img src={avatar} alt="avatar" />
         </div>
@@ -69,7 +69,7 @@ function Topbar() {
             <button onClick={handleLogout}>Logout</button>
           </div>
         )}
-
+        </div>
       </div>
     </div>
   );

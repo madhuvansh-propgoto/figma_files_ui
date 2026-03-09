@@ -98,16 +98,16 @@ select:focus {
 .btn.primary {
   background: #5051F9;
   color: #FFFFFF;
-  width: 192px;
-  height: 46px;
+  width: 214px;
+  height: 51px;
 }
 
 .btn.secondary {
     background-color: #D7D7D7;
     color: #505050;
     border-radius: 90px;
-    width: 118px;
-    height: 46px;
+    width: 140px;
+    height: 51px;
 }
 
 .btn.secondary:hover {

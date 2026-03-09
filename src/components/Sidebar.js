@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Sidebar.css";
 
@@ -13,6 +12,7 @@ import addFolder from "../assets/img7side.svg";
 const Sidebar = () => {
   return (
     <div className="sidebar">
+
       <div className="logo">
         <img src={logo} alt="Logo" />
         <p className="logo-text">OCTOM.</p>
@@ -24,11 +24,12 @@ const Sidebar = () => {
         <img src={book} alt="Book" />
         <img src={settings} alt="Settings" />
         <img src={send} alt="Send" />
+
+        <div className="add-btn">
+          <img src={addFolder} alt="Add Folder" />
+        </div>
       </div>
 
-      <div className="bottom">
-        <img src={addFolder}  alt="Add Folder" />
-      </div>
     </div>
   );
 };

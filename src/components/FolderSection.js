@@ -12,7 +12,7 @@ const FolderSection = () => {
     { title: "Music", count: "102 files", color: "#5051F9" },
     { title: "Work Project", count: "84 files", color: "#1EA7FF", badges: [aImg,bImg] },
     { title: "Personal Media", count: "2450 files", color: "#F7B000", badges: [aImg] },
-    { title: "Reddingo Backup", count: "22 files", color: "#34D870", badges:[aImg] },
+    { title: "Reddingo Backup", count: "22 files", color: "#34D870" },
     { title:"Root", count:"105 files", color: "#FF694A", badges:[bImg]}
   ];
 

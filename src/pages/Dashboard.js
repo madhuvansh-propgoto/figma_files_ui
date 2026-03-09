@@ -17,7 +17,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <Sidebar />
 
-      <div className="main">
+      <div className="main" >
         <Topbar />
 
         <div className="page-header">
@@ -42,7 +42,7 @@ const Dashboard = () => {
         </div>
 
         <div className="content">
-           <div className="left-panel">
+          <div className="left-panel">
             <FolderSection />
             <RecentFiles />
           </div> 
