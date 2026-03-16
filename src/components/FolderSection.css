@@ -69,3 +69,12 @@
   margin-left: 7px;
 }
 
+.folder-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+
+  max-height:420px;
+  overflow-y:auto;
+  padding-right:5px;
+}
