@@ -14,7 +14,7 @@ const CreateFolderModal = ({ onClose }) => {
       return;
     }
 
-    const userId = "d2afafaf-f972-44aa-b5ca-bb103c7357ab"; // real user id
+    const userId = "27537958-7234-4352-96d6-b9ed65461931"; 
 
     const payload = {
       name: folderName,

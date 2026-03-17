@@ -12,6 +12,9 @@
   width: 100%;
   border-radius: 10px;
   border: 2px solid #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .section-header {
@@ -46,6 +49,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
 }
 
 .folder-label-icon{
