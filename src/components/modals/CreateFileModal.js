@@ -21,7 +21,7 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
       ...formData,
       name: file.name,
       size: file.size,
-      type: file.type
+      type: file.name.split(".").pop()
     });
   };
 
@@ -107,10 +107,9 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
             required
           >
             <option value="">Select Category</option>
-            <option value="document">Document</option>
-            <option value="image">Image</option>
-            <option value="design">Design</option>
-            <option value="other">Other</option>
+            <option value="media">Media</option>
+            <option value="docs">Docs</option>
+            <option value="music">Music</option>
           </select>
 
           <div className="modal-actions">

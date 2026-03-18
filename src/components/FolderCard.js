@@ -4,10 +4,9 @@ import { FaFolder } from "react-icons/fa";
 
 // import { FaFolder } from "react-icons/fa";
 
-const FolderCard = ({ name, color }) => {
-  console.log("name-------", name)
+const FolderCard = ({ id , name, color , onClick }) => {
   return (
-    <div className="folder-card">
+    <div className="folder-card" onClick={() =>onClick(id)}>
 
       <div className="card-top">
         <FaFolder className="folder-icon" style={{ color: color }} />

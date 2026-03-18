@@ -12,6 +12,7 @@ import Topbar from "../components/Topbar";
 const Dashboard = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showUploadModal, setShowUploadModal] = useState(false);
+  const [selectedFolderId, setSelectedFolderId] = useState(null);
 
   return (
     <div className="dashboard">
@@ -33,7 +34,14 @@ const Dashboard = () => {
 
             <button
               className="btn secondary"
-              onClick={() => setShowUploadModal(true)}
+              // onClick={() => setShowUploadModal(true)}
+              onClick={() => {
+                if (!selectedFolderId) {
+                  alert("Select a folder first");
+                  return;
+                }
+                setShowUploadModal(true);
+              }}
             >
               <img src={upload} alt="upload" className="btn-icon" />
               Upload
@@ -43,7 +51,7 @@ const Dashboard = () => {
 
         <div className="content">
           <div className="left-panel">
-            <FolderSection />
+            <FolderSection onFolderSelect={setSelectedFolderId} />
             <RecentFiles />
           </div> 
 
@@ -62,7 +70,7 @@ const Dashboard = () => {
       {showUploadModal && (
         <CreateFileModal
           onClose={() => setShowUploadModal(false)}
-          folderId="folder-uuid"
+          folderId={selectedFolderId}
           ownerId="user-uuid"
         />
       )}

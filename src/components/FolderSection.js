@@ -117,7 +117,7 @@ import FolderCard from "./FolderCard";
 import { FiChevronDown } from "react-icons/fi";
 import { FaFolder } from "react-icons/fa";
 
-const FolderSection = () => {
+const FolderSection = ( {onFolderSelect} ) => {
 
   const [folders, setFolders] = useState([]);
 
@@ -133,6 +133,7 @@ const FolderSection = () => {
      
       console.log("result-----", result)
       const formatted = result?.map((f) => ({
+        id:f.id,
         title: f.name,
         count: "0 files",
         color: f.color
@@ -169,11 +170,14 @@ const FolderSection = () => {
         {folders?.map((folder) => (
           <FolderCard
             key={folder.id}
+            id={folder.id}
             name={folder.title}
             color={folder.color}
+            onClick={onFolderSelect}
           />
         ))}
       </div>
+      
 
     </div>
   );
