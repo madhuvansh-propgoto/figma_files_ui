@@ -131,11 +131,10 @@ const FolderSection = ( {onFolderSelect} ) => {
       const res = await fetch("http://localhost:5000/api/folders");
       const result = await res.json();
      
-      console.log("result-----", result)
       const formatted = result?.map((f) => ({
         id:f.id,
         title: f.name,
-        count: "0 files",
+        count: f.file_count,
         color: f.color
       }));
 
@@ -172,6 +171,7 @@ const FolderSection = ( {onFolderSelect} ) => {
             key={folder.id}
             id={folder.id}
             name={folder.title}
+            count={folder.count}
             color={folder.color}
             onClick={onFolderSelect}
           />

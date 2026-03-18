@@ -66,11 +66,11 @@ const Login = () => {
       });
 
       const data = await response.json();
-      console.log(response.status, data); 
 
       if (response.ok) {
+        localStorage.setItem("user", JSON.stringify(data?.user));
         navigate("/dashboard");
-      } else {
+      }else {
         alert("Invalid email or password");
       }
 
@@ -78,6 +78,7 @@ const Login = () => {
       console.error(error);
     }
   };
+
 
   return (
     <div className="login-container">

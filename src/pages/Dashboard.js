@@ -13,7 +13,10 @@ const Dashboard = () => {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [selectedFolderId, setSelectedFolderId] = useState(null);
+  const user = JSON.parse(localStorage.getItem("user"));
+  const ownerId = user?.id;
 
+  console.log("Dashboard ownerId:", ownerId);
   return (
     <div className="dashboard">
       <Sidebar />
@@ -35,13 +38,7 @@ const Dashboard = () => {
             <button
               className="btn secondary"
               // onClick={() => setShowUploadModal(true)}
-              onClick={() => {
-                if (!selectedFolderId) {
-                  alert("Select a folder first");
-                  return;
-                }
-                setShowUploadModal(true);
-              }}
+              onClick={() => setShowUploadModal(true)}
             >
               <img src={upload} alt="upload" className="btn-icon" />
               Upload
@@ -71,7 +68,7 @@ const Dashboard = () => {
         <CreateFileModal
           onClose={() => setShowUploadModal(false)}
           folderId={selectedFolderId}
-          ownerId="user-uuid"
+          ownerId={ownerId}
         />
       )}
     </div>

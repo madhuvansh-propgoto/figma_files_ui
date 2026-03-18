@@ -4,7 +4,7 @@ import { FaFolder } from "react-icons/fa";
 
 // import { FaFolder } from "react-icons/fa";
 
-const FolderCard = ({ id , name, color , onClick }) => {
+const FolderCard = ({ id , name, count ,color , onClick }) => {
   return (
     <div className="folder-card" onClick={() =>onClick(id)}>
 
@@ -14,7 +14,7 @@ const FolderCard = ({ id , name, color , onClick }) => {
 
       <div className="card-body">
         <h4>{name}</h4>
-        <p>0 files</p>
+        <p>{count}</p>
       </div>
 
     </div>

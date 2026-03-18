@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CreateFileModal.css";
 
 const CreateFileModal = ({ onClose, folderId, ownerId }) => {
   const [formData, setFormData] = useState({
     name: "",
     size: "",
-    type: "",
-    category: ""
+    type: ""
   });
 
   const [selectedFile, setSelectedFile] = useState(null);
+  const [folders, setFolders] = useState([]);
+  const [selectedFolder, setSelectedFolder] = useState(folderId || "");
+
+  useEffect(() => {
+    fetchFolders();
+  }, []);
+
+  const fetchFolders = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/api/folders");
+      const data = await res.json();
+      setFolders(data);
+    } catch (err) {
+      console.error("Error fetching folders", err);
+    }
+  };
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -40,13 +55,17 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
       return;
     }
 
+    if (!selectedFolder) {
+      alert("Please select a folder");
+      return;
+    }
+
     const data = new FormData();
     data.append("file", selectedFile);
     data.append("name", formData.name);
     data.append("size", formData.size);
     data.append("type", formData.type);
-    data.append("category", formData.category);
-    data.append("folder_id", folderId);
+    data.append("folder_id", selectedFolder);
     data.append("owner_id", ownerId);
 
     try {
@@ -70,7 +89,6 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
         <h2>Upload File</h2>
 
         <form onSubmit={handleSubmit}>
-          
           <input
             type="file"
             id="fileUpload"
@@ -100,16 +118,18 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
             required
           />
 
+          {/* Folder Dropdown */}
           <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
+            value={selectedFolder}
+            onChange={(e) => setSelectedFolder(e.target.value)}
             required
           >
-            <option value="">Select Category</option>
-            <option value="media">Media</option>
-            <option value="docs">Docs</option>
-            <option value="music">Music</option>
+            <option value="">Select Folder</option>
+            {folders.map((folder) => (
+              <option key={folder.id} value={folder.id}>
+                {folder.name}
+              </option>
+            ))}
           </select>
 
           <div className="modal-actions">
@@ -125,7 +145,6 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
               Cancel
             </button>
           </div>
-
         </form>
       </div>
     </div>
