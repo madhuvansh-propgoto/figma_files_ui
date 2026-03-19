@@ -1,0 +1,14 @@
+.modal.large {
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.files-list {
+  margin-top: 20px;
+}
+
+.file-item {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}

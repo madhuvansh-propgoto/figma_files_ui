@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./CreateFileModal.css";
 
-const CreateFileModal = ({ onClose, folderId, ownerId }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    size: "",
-    type: ""
-  });
+const CreateFileModal = ({ onClose, folderId, ownerId , onUploadSuccess}) => {
+  const fileInputRef = useRef(null);
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [folders, setFolders] = useState([]);
@@ -29,22 +25,7 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
-
     setSelectedFile(file);
-
-    setFormData({
-      ...formData,
-      name: file.name,
-      size: file.size,
-      type: file.name.split(".").pop()
-    });
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   const handleSubmit = async (e) => {
@@ -62,9 +43,6 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
 
     const data = new FormData();
     data.append("file", selectedFile);
-    data.append("name", formData.name);
-    data.append("size", formData.size);
-    data.append("type", formData.type);
     data.append("folder_id", selectedFolder);
     data.append("owner_id", ownerId);
 
@@ -77,6 +55,10 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
       const result = await res.json();
       console.log(result);
 
+      // onClose();
+      if (onUploadSuccess) {
+        onUploadSuccess();
+      }
       onClose();
     } catch (err) {
       console.error(err);
@@ -93,6 +75,7 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
             type="file"
             id="fileUpload"
             hidden
+            ref={fileInputRef}
             onChange={handleFileChange}
           />
 
@@ -100,25 +83,32 @@ const CreateFileModal = ({ onClose, folderId, ownerId }) => {
             Select File
           </label>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="File Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          {selectedFile && (
+            <div className="file-info">
+              <div className="file-info-header">
+                <span className="file-name">{selectedFile.name}</span>
 
-          <input
-            type="text"
-            name="type"
-            placeholder="File Type"
-            value={formData.type}
-            onChange={handleChange}
-            required
-          />
+                <button
+                  type="button"
+                  className="remove-file-btn"
+                  onClick={() => {
+                    setSelectedFile(null);
+                    if (fileInputRef.current) {
+                      fileInputRef.current.value = "";
+                    }
+                  }}
+                >
+                  ×
+                </button>
+              </div>
 
-          {/* Folder Dropdown */}
+              <p className="file-meta">Type: {selectedFile.type}</p>
+              <p className="file-meta">
+                Size: {(selectedFile.size / 1024).toFixed(2)} KB
+              </p>
+            </div>
+          )}
+
           <select
             value={selectedFolder}
             onChange={(e) => setSelectedFolder(e.target.value)}
